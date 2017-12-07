@@ -7,13 +7,24 @@
   height: 85px;
   min-width: 60px;
   width: 25%;
-  background-color: blue;
+  background-color: #c1c1c1;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.25s ease-in-out;
 }
 
 .banks img {
   width: 80%;
-  height: 60%;
+  height: 40%;
+}
+
+.banks:hover {
+  opacity: 0.7;
+}
+
+.bankSelected {
+  border: 1px dotted #2c4251;
 }

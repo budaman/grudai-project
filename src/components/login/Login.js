@@ -25,7 +25,9 @@ const muiTheme = getMuiTheme({
 
 class Login extends Component {
   state = {
-    open: false
+    open: false,
+    selectedBank: "",
+    loading: false
   };
 
   handleRequestClose = () => {
@@ -35,15 +37,23 @@ class Login extends Component {
   };
 
   handleRequestOk = () => {
-    this.props.isUserConnected();
     this.setState({
-      open: false
+      loading: true
     });
+    setTimeout(() => {
+      this.props.isUserConnected();
+    }, 1000);
   };
 
   handleTouchTap = () => {
     this.setState({
       open: true
+    });
+  };
+
+  selectBank = val => {
+    this.setState({
+      selectedBank: val
     });
   };
 
@@ -55,6 +65,7 @@ class Login extends Component {
         onTouchTap={this.handleRequestOk}
       />
     );
+    console.log(this.state.loading);
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div style={styles.container}>
@@ -64,8 +75,51 @@ class Login extends Component {
             actions={standardActions}
             onRequestClose={this.handleRequestClose}
           >
-            {/* <CircularProgress size={80} thickness={5} /> */}
-            <Banks />
+            {this.state.loading ? (
+              <CircularProgress size={80} thickness={5} />
+            ) : (
+              <div className="banks-container">
+                <div
+                  style={
+                    this.state.selectedBank === "seb"
+                      ? { background: "#A5A5A5" }
+                      : null
+                  }
+                  className="banks"
+                  onClick={() => {
+                    this.selectBank("seb");
+                  }}
+                >
+                  <img src="assets/seb.png" alt="seb logo" />
+                </div>
+                <div
+                  style={
+                    this.state.selectedBank === "swed"
+                      ? { background: "#A5A5A5" }
+                      : null
+                  }
+                  className="banks"
+                  onClick={() => {
+                    this.selectBank("swed");
+                  }}
+                >
+                  <img src="assets/swed.png" alt="swed bank logo" />
+                </div>
+                <div
+                  style={
+                    this.state.selectedBank === "dnb"
+                      ? { background: "#A5A5A5" }
+                      : null
+                  }
+                  className="banks"
+                  onClick={() => {
+                    this.selectBank("dnb");
+                  }}
+                >
+                  <img src="assets/dnb.png" alt="dNb bank logo" />
+                </div>
+              </div>
+            )}
           </Dialog>
           <Content handleTouchTap={this.handleTouchTap} />
         </div>
@@ -86,22 +140,6 @@ const Content = props => {
         secondary={true}
         onTouchTap={props.handleTouchTap}
       />
-    </div>
-  );
-};
-
-const Banks = props => {
-  return (
-    <div className="banks-container">
-      <div className="banks">
-        <img src="assets/seb.png" alt="seb logo" />
-      </div>
-      <div className="banks">
-        <img src="assets/swed.png" alt="swed bank logo" />
-      </div>
-      <div className="banks">
-        <img src="assets/dnb.png" alt="dNb bank logo" />
-      </div>
     </div>
   );
 };
