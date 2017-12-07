@@ -7,7 +7,7 @@
   height: 85px;
   min-width: 60px;
   width: 25%;
-  background-color: #c1c1c1;
+  background-color: #dad6d6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +25,8 @@
   opacity: 0.7;
 }
 
-.bankSelected {
-  border: 1px dotted #2c4251;
+.loader-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

@@ -37,12 +37,15 @@ class Login extends Component {
   };
 
   handleRequestOk = () => {
+    if (this.state.selectedBank === "") {
+      return false;
+    }
     this.setState({
       loading: true
     });
     setTimeout(() => {
       this.props.isUserConnected();
-    }, 1000);
+    }, 1500);
   };
 
   handleTouchTap = () => {
@@ -65,7 +68,6 @@ class Login extends Component {
         onTouchTap={this.handleRequestOk}
       />
     );
-    console.log(this.state.loading);
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div style={styles.container}>
@@ -76,13 +78,15 @@ class Login extends Component {
             onRequestClose={this.handleRequestClose}
           >
             {this.state.loading ? (
-              <CircularProgress size={80} thickness={5} />
+              <div className="loader-cont">
+                <CircularProgress size={80} thickness={5} />
+              </div>
             ) : (
               <div className="banks-container">
                 <div
                   style={
                     this.state.selectedBank === "seb"
-                      ? { background: "#A5A5A5" }
+                      ? { background: "#d2d2d2" }
                       : null
                   }
                   className="banks"
@@ -95,7 +99,7 @@ class Login extends Component {
                 <div
                   style={
                     this.state.selectedBank === "swed"
-                      ? { background: "#A5A5A5" }
+                      ? { background: "#d2d2d2" }
                       : null
                   }
                   className="banks"
@@ -108,7 +112,7 @@ class Login extends Component {
                 <div
                   style={
                     this.state.selectedBank === "dnb"
-                      ? { background: "#A5A5A5" }
+                      ? { background: "#d2d2d2" }
                       : null
                   }
                   className="banks"
