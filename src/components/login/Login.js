@@ -7,8 +7,6 @@ import getMuiTheme from "material-ui/styles/getMuiTheme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import injectTapEventPlugin from "react-tap-event-plugin";
 import CircularProgress from "material-ui/CircularProgress";
-import { deepOrange500 } from "material-ui/styles/colors";
-import Popover from "material-ui/Popover";
 
 injectTapEventPlugin();
 
@@ -21,29 +19,18 @@ const styles = {
 
 const muiTheme = getMuiTheme({
   palette: {
-    accent1Color: deepOrange500
+    accent1Color: "#bda26d"
   }
 });
 
 class Login extends Component {
   state = {
-    open: false,
-    openHelp: false
-  };
-
-  handlePopUp = event => {
-    event.preventDefault();
-
-    this.setState({
-      openHelp: true,
-      anchorEl: event.currentTarget
-    });
+    open: false
   };
 
   handleRequestClose = () => {
     this.setState({
-      open: false,
-      openHelp: false
+      open: false
     });
   };
 
@@ -62,31 +49,25 @@ class Login extends Component {
 
   render() {
     const standardActions = (
-      <FlatButton label="Ok" primary={true} onTouchTap={this.handleRequestOk} />
+      <FlatButton
+        label="jungtis"
+        primary={true}
+        onTouchTap={this.handleRequestOk}
+      />
     );
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div style={styles.container}>
           <Dialog
             open={this.state.open}
-            title="Meging with your gmail account"
+            title="Pasirinkite norimą banką"
             actions={standardActions}
             onRequestClose={this.handleRequestClose}
           >
-            <CircularProgress size={80} thickness={5} />
+            {/* <CircularProgress size={80} thickness={5} /> */}
+            <Banks />
           </Dialog>
           <Content handleTouchTap={this.handleTouchTap} />
-          <button onClick={this.handlePopUp}>Help</button>
-          <Popover
-            open={this.state.openHelp}
-            anchorEl={this.state.anchorEl}
-            anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
-            targetOrigin={{ horizontal: "left", vertical: "top" }}
-            onRequestClose={this.handleRequestClose}
-          >
-            <h6>Satalia support contacts</h6>
-            <h6>PwC support conttacts</h6>
-          </Popover>
         </div>
       </MuiThemeProvider>
     );
@@ -98,13 +79,29 @@ export default Login;
 const Content = props => {
   return (
     <div className="login-container">
-      <img className="pwc-logo" src="assets/pwc.png" alt="pwc-logo" />
-      <h1>PwC-juggler:</h1>
+      <img className="pwc-logo" src="assets/grudai.png" alt="pwc-logo" />
+      <h1>KG Klientu Sistema</h1>
       <RaisedButton
-        label="logging with gmail account"
+        label="prisijungti prie sistemos"
         secondary={true}
         onTouchTap={props.handleTouchTap}
       />
+    </div>
+  );
+};
+
+const Banks = props => {
+  return (
+    <div className="banks-container">
+      <div className="banks">
+        <img src="assets/seb.png" alt="seb logo" />
+      </div>
+      <div className="banks">
+        <img src="assets/swed.png" alt="swed bank logo" />
+      </div>
+      <div className="banks">
+        <img src="assets/dnb.png" alt="dNb bank logo" />
+      </div>
     </div>
   );
 };

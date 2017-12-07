@@ -23,7 +23,7 @@ class App extends Component {
             connected={this.state.connected}
           />
         )}
-        <Main />
+        {this.state.connected ? <Main /> : null}
       </div>
     );
   }
