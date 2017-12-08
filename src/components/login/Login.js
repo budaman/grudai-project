@@ -137,8 +137,13 @@ export default Login;
 const Content = props => {
   return (
     <div className="login-container">
-      <img className="pwc-logo" src="assets/grudai.png" alt="pwc-logo" />
-      <h1>KG Klientu Sistema</h1>
+      <img
+        id="grudai-logo"
+        className="pwc-logo"
+        src="assets/grudai.png"
+        alt="pwc-logo"
+      />
+      <h1>KG Klientų Sistema</h1>
       <RaisedButton
         label="prisijungti prie sistemos"
         secondary={true}
