@@ -113,8 +113,8 @@
 }
 
 .stats-window {
-  width: 400px;
-  height: 300px;
+  width: 350px;
+  height: 200px;
   background-color: green;
-  margin: 5px;
+  margin: 20px;
 }
