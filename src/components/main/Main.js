@@ -109,13 +109,18 @@ class Main extends Component {
                 />
               </List>
             </Drawer>
-            {this.props.isAuthenticated && (
-              <div
-                className={classnames("app-content", {
-                  expanded: this.state.open
-                })}
-              />
-            )}
+            <div
+              className={classnames("app-content", {
+                expanded: this.state.open
+              })}
+            />
+            <div
+              className={classnames("app-container", {
+                expanded: this.state.open
+              })}
+            >
+              appppppppaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </div>
           </div>
         </MuiThemeProvider>
       </div>
