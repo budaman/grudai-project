@@ -19,7 +19,6 @@ import PlacesAirportShuttle from "material-ui/svg-icons/places/airport-shuttle";
 import ImageRemoveRedEye from "material-ui/svg-icons/image/remove-red-eye";
 import ImageFilterFrames from "material-ui/svg-icons/image/filter-frames";
 import HardwareDeveloperBoard from "material-ui/svg-icons/hardware/developer-board";
-import SocialNotifications from "material-ui/svg-icons/social/notifications";
 import Avatar from "material-ui/Avatar";
 import Badge from "material-ui/Badge";
 import IconButton from "material-ui/IconButton";

@@ -14,15 +14,26 @@ class User extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <FlatButton label="Default" />
-          <FlatButton label="Primary" primary={true} />
-          <FlatButton label="Secondary" secondary={true} />
-          <FlatButton label="Disabled" disabled={true} />
-          <br />
-          <br />
-          <FlatButton label="Full width" fullWidth={true} />
+      <div className="user-panel">
+        <div className="top-header">
+          <div className="status-bar">status bar</div>
+          <div className="money-section">pinigai</div>
+        </div>
+        <div className="statistic-container">
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
+          <div className="stats-window">1</div>
         </div>
       </div>
     );
