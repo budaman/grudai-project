@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+
+import User from "./panel/User";
+
 import { List, ListItem } from "material-ui/List";
 import AppBar from "material-ui/AppBar";
 import Drawer from "material-ui/Drawer";
@@ -17,6 +20,10 @@ import ImageRemoveRedEye from "material-ui/svg-icons/image/remove-red-eye";
 import ImageFilterFrames from "material-ui/svg-icons/image/filter-frames";
 import HardwareDeveloperBoard from "material-ui/svg-icons/hardware/developer-board";
 import SocialNotifications from "material-ui/svg-icons/social/notifications";
+import Avatar from "material-ui/Avatar";
+import Badge from "material-ui/Badge";
+import IconButton from "material-ui/IconButton";
+import NotificationsIcon from "material-ui/svg-icons/social/notifications";
 
 class Main extends Component {
   state = {
@@ -32,6 +39,10 @@ class Main extends Component {
   };
 
   render() {
+    const styles = {
+      alert: { width: 18, height: 18, top: -15, fontSize: 9 },
+      bell: { top: -35 }
+    };
     return (
       <div>
         <MuiThemeProvider muiTheme={getMuiTheme()}>
@@ -42,8 +53,19 @@ class Main extends Component {
               title="Kliento skydelis"
               iconElementRight={
                 <ListItem
-                  primaryText="Pranešimai"
-                  rightIcon={<SocialNotifications />}
+                  leftAvatar={<Avatar size={40} src="assets/mantvydas.jpg" />}
+                  primaryText="Mantvydas B."
+                  rightIcon={
+                    <Badge
+                      badgeContent={1}
+                      secondary={true}
+                      badgeStyle={styles.alert}
+                    >
+                      <IconButton style={styles.bell} tooltip="Notifications">
+                        <NotificationsIcon />
+                      </IconButton>
+                    </Badge>
+                  }
                 />
               }
             />
@@ -119,7 +141,7 @@ class Main extends Component {
                 expanded: this.state.open
               })}
             >
-              appppppppaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+              <User />
             </div>
           </div>
         </MuiThemeProvider>
