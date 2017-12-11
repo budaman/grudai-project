@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Steper from "./Steper";
+import MoneyBar from "./MoneyBar";
 
 class User extends Component {
   state = {
@@ -15,24 +17,28 @@ class User extends Component {
     return (
       <div className="user-panel">
         <div className="top-header">
-          <div className="status-bar">status bar</div>
-          <div className="money-section">money</div>
+          <div className="status-bar">
+            <Steper />
+          </div>
+          <div className="money-section">
+            <MoneyBar />
+          </div>
         </div>
         <div className="statistic-container">
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
-          <div className="stats-window">1</div>
+          <div className="stats-window" />
+          <div className="stats-window" />
+          <div className="stats-window" />
+          <div className="stats-window" />
+          <div className="stats-window" />
+          <div className="stats-window" />
+          <div className="stats-window" />
+          <div className="stats-window" />
+          <div className="stats-window" />
+          <div className="stats-window" />
+          <div className="stats-window" />
+          <div className="stats-window" />
+          <div className="stats-window" />
+          <div className="stats-window" />
         </div>
       </div>
     );
