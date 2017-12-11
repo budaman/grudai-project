@@ -94,7 +94,7 @@
   align-items: center;
   width: 20%;
   height: 50px;
-  background-color: red;
+  background-color: #007ea7;
 }
 .status-bar {
   display: flex;
@@ -102,7 +102,7 @@
   align-items: center;
   width: 80%;
   height: 50px;
-  background-color: blue;
+  background-color: #3e6680;
 }
 
 .statistic-container {
@@ -115,6 +115,15 @@
 .stats-window {
   width: 350px;
   height: 200px;
-  background-color: green;
+  background-color: #92b9bd;
   margin: 20px;
+}
+
+.progress {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

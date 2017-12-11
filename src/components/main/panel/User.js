@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import FlatButton from "material-ui/FlatButton";
 
 class User extends Component {
   state = {
@@ -17,7 +16,7 @@ class User extends Component {
       <div className="user-panel">
         <div className="top-header">
           <div className="status-bar">status bar</div>
-          <div className="money-section">pinigai</div>
+          <div className="money-section">money</div>
         </div>
         <div className="statistic-container">
           <div className="stats-window">1</div>

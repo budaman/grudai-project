@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 
 import User from "./panel/User";
+import Schedule from "./panel/Schedule";
+import Loading from "./panel/Loading";
+import ChangeDate from "./panel/ChangeDate";
 
 import { List, ListItem } from "material-ui/List";
 import AppBar from "material-ui/AppBar";
@@ -26,7 +29,9 @@ import NotificationsIcon from "material-ui/svg-icons/social/notifications";
 
 class Main extends Component {
   state = {
-    open: true
+    open: true,
+    pageState: "userPanel",
+    loading: false
   };
 
   handleToggle = () => {
@@ -35,6 +40,28 @@ class Main extends Component {
 
   handleClose = () => {
     this.setState({ open: true });
+  };
+
+  handlePage = page => {
+    if (page === "schedule") {
+      this.setState({
+        pageState: page,
+        loading: false
+      });
+    }
+
+    if (page === "userPanel") {
+      this.setState({
+        pageState: page,
+        loading: false
+      });
+    }
+    if (page === "changeDate") {
+      this.setState({
+        pageState: page,
+        loading: false
+      });
+    }
   };
 
   render() {
@@ -52,6 +79,7 @@ class Main extends Component {
               title="Kliento skydelis"
               iconElementRight={
                 <ListItem
+                  className="profile"
                   leftAvatar={<Avatar size={40} src="assets/mantvydas.jpg" />}
                   primaryText="Mantvydas B."
                   rightIcon={
@@ -77,10 +105,27 @@ class Main extends Component {
                 <Subheader>Menu</Subheader>
                 <ListItem
                   primaryText="Kliento skydelis"
+                  onClick={() => {
+                    // this.handlePage("userPanel");
+                    this.setState({
+                      loading: true
+                    });
+                    setTimeout(() => {
+                      this.handlePage("userPanel");
+                    }, 1000);
+                  }}
                   leftIcon={<ActionAccountCircle />}
                 />
                 <ListItem
                   primaryText="Grafikai"
+                  onClick={() => {
+                    this.setState({
+                      loading: true
+                    });
+                    setTimeout(() => {
+                      this.handlePage("schedule");
+                    }, 500);
+                  }}
                   leftIcon={<ActionDateRange />}
                 />
                 <ListItem
@@ -93,6 +138,14 @@ class Main extends Component {
                       key={1}
                       primaryText="Keisti kalanedorių"
                       leftIcon={<ActionUpdate />}
+                      onClick={() => {
+                        this.setState({
+                          loading: true
+                        });
+                        setTimeout(() => {
+                          this.handlePage("changeDate");
+                        }, 100);
+                      }}
                     />,
                     <ListItem
                       key={2}
@@ -108,6 +161,11 @@ class Main extends Component {
                         <ListItem
                           key={2}
                           primaryText="Reglamentacija"
+                          leftIcon={<ImageFilterFrames />}
+                        />,
+                        <ListItem
+                          key={3}
+                          primaryText="Prideti dokumentus"
                           leftIcon={<ImageFilterFrames />}
                         />
                       ]}
@@ -140,7 +198,16 @@ class Main extends Component {
                 expanded: this.state.open
               })}
             >
-              <User />
+              {this.state.pageState === "userPanel" && !this.state.loading ? (
+                <User />
+              ) : null}
+              {this.state.pageState === "schedule" && !this.state.loading ? (
+                <Schedule />
+              ) : null}
+              {this.state.pageState === "changeDate" && !this.state.loading ? (
+                <ChangeDate />
+              ) : null}
+              {this.state.loading ? <Loading /> : null}
             </div>
           </div>
         </MuiThemeProvider>
