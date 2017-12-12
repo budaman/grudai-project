@@ -1,5 +1,16 @@
 import React, { Component } from "react";
 
+import FlatButton from "material-ui/FlatButton";
+import ContentAddCircle from "material-ui/svg-icons/content/add-circle";
+
+const styles = {
+  uploadButton: {
+    verticalAlign: "middle",
+    marginTop: 5,
+    color: "#bda26d"
+  }
+};
+
 class MoneyBar extends Component {
   state = {
     finished: false,
@@ -10,11 +21,19 @@ class MoneyBar extends Component {
     return (
       <div>
         <div className="money-div">
-          Pinigai: <span className="money-span">500eur</span>
+          Sąskaita: <span className="money-span">500€</span>
         </div>
         <div className="money-div">
           Skola: <span className="money-span">nėra</span>
         </div>
+        <FlatButton
+          style={styles.uploadButton}
+          className="money-button"
+          label="papildyti sąskaitą"
+          labelPosition="before"
+          primary={true}
+          icon={<ContentAddCircle />}
+        />
       </div>
     );
   }

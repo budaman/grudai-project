@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Step, Stepper, StepLabel } from "material-ui/Stepper";
-import RaisedButton from "material-ui/RaisedButton";
-import FlatButton from "material-ui/FlatButton";
 
 class Steper extends Component {
   state = {
@@ -38,11 +36,11 @@ class Steper extends Component {
   }
 
   render() {
-    const { finished, stepIndex } = this.state;
+    const { stepIndex } = this.state;
     const contentStyle = { margin: "0 20px" };
 
     return (
-      <div style={{ width: "100%", maxWidth: 700, margin: "auto" }}>
+      <div style={{ width: "100%", maxWidth: 550, margin: "auto" }}>
         <Stepper activeStep={stepIndex}>
           <Step>
             <StepLabel>Grūdų pridavimas</StepLabel>

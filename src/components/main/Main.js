@@ -26,12 +26,14 @@ import Avatar from "material-ui/Avatar";
 import Badge from "material-ui/Badge";
 import IconButton from "material-ui/IconButton";
 import NotificationsIcon from "material-ui/svg-icons/social/notifications";
+import ActionEuroSymbol from "material-ui/svg-icons/action/euro-symbol";
 
 class Main extends Component {
   state = {
     open: true,
     pageState: "userPanel",
-    loading: false
+    loading: false,
+    thisPage: "Kliento skydelis"
   };
 
   handleToggle = () => {
@@ -46,28 +48,38 @@ class Main extends Component {
     if (page === "schedule") {
       this.setState({
         pageState: page,
-        loading: false
+        loading: false,
+        thisPage: "Grafikai"
       });
     }
 
     if (page === "userPanel") {
       this.setState({
         pageState: page,
-        loading: false
+        loading: false,
+        thisPage: "Kliento skydelis"
       });
     }
     if (page === "changeDate") {
       this.setState({
         pageState: page,
-        loading: false
+        loading: false,
+        thisPage: "Keisti kalendorių"
       });
     }
   };
 
   render() {
     const styles = {
-      alert: { width: 18, height: 18, top: -15, fontSize: 9 },
-      bell: { top: -35 }
+      alert: {
+        width: 16,
+        height: 16,
+        top: -12,
+        fontSize: 9,
+        backgroundColor: "#EF476F"
+      },
+      bell: { top: -35 },
+      addMoney: { backgroundColor: "#bda26d" }
     };
     return (
       <div>
@@ -76,7 +88,7 @@ class Main extends Component {
             <AppBar
               className={classnames("app-bar", { expanded: this.state.open })}
               onLeftIconButtonClick={this.handleToggle}
-              title="Kliento skydelis"
+              title={this.state.thisPage}
               iconElementRight={
                 <ListItem
                   className="profile"
@@ -115,6 +127,19 @@ class Main extends Component {
                     }, 1000);
                   }}
                   leftIcon={<ActionAccountCircle />}
+                />
+                <ListItem
+                  primaryText="Pinigų operacijos"
+                  onClick={() => {
+                    // this.handlePage("userPanel");
+                    this.setState({
+                      loading: true
+                    });
+                    setTimeout(() => {
+                      this.handlePage("userPanel");
+                    }, 1000);
+                  }}
+                  leftIcon={<ActionEuroSymbol />}
                 />
                 <ListItem
                   primaryText="Grafikai"
