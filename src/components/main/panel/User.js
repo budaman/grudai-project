@@ -17,6 +17,9 @@ class User extends Component {
     return (
       <div className="user-panel">
         <div className="top-header">
+          <div className="logo-header">
+            <img src="assets/grudai.png" alt="grudai" />
+          </div>
           <div className="status-bar">
             <Steper />
           </div>
@@ -44,11 +47,11 @@ class User extends Component {
               </div>
             </div>
           </div>
-          <div className="stats-window" />
-          <div className="stats-window" />
-          <div className="stats-window" />
-          <div className="stats-window" />
-          <div className="stats-window" />
+          <div className="stats-window-big">
+            <h5>Lorem ipsum</h5>
+
+            <div className="stats-cont" />
+          </div>
           <div className="stats-window" />
           <div className="stats-window" />
           <div className="stats-window" />

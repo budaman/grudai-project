@@ -91,6 +91,15 @@
   display: flex;
 }
 
+.logo-header {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+}
+.logo-header img {
+  height: 100px;
+}
+
 .money-section {
   display: flex;
   justify-content: center;
@@ -101,7 +110,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 65%;
+  width: 45%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .top-header {
+    flex-direction: column;
+  }
+  .status-bar {
+    width: 100%;
+  }
+  .money-section {
+    width: 100%;
+  }
+  .logo-header {
+    width: 100%;
+  }
 }
 
 .statistic-container {
@@ -127,6 +151,11 @@
   color: white;
   margin: 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.stats-window-big:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .stats-window-big h5 {
@@ -182,7 +211,7 @@
 }
 
 .money-div {
-  margin-top: 15px;
+  margin-top: 5px;
   font-size: 0.9rem;
   display: flex;
   justify-content: center;

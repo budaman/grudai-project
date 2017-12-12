@@ -7,7 +7,7 @@ const styles = {
   uploadButton: {
     verticalAlign: "middle",
     marginTop: 5,
-    color: "#bda26d"
+    color: "#629460"
   }
 };
 
@@ -24,7 +24,7 @@ class MoneyBar extends Component {
           Sąskaita: <span className="money-span">500€</span>
         </div>
         <div className="money-div">
-          Skola: <span className="money-span">nėra</span>
+          Skola: <span className="money-span">-</span>
         </div>
         <FlatButton
           style={styles.uploadButton}

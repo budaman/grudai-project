@@ -36,6 +36,9 @@ class Steper extends Component {
   }
 
   render() {
+    const style = {
+      display: "none"
+    };
     const { stepIndex } = this.state;
     const contentStyle = { margin: "0 20px" };
 
@@ -43,13 +46,15 @@ class Steper extends Component {
       <div style={{ width: "100%", maxWidth: 550, margin: "auto" }}>
         <Stepper activeStep={stepIndex}>
           <Step>
-            <StepLabel>Grūdų pridavimas</StepLabel>
+            <StepLabel style={{ fontSize: 13 }} className={style}>
+              Grūdų pridavimas
+            </StepLabel>
           </Step>
           <Step>
-            <StepLabel>Grūdų tikrinimas</StepLabel>
+            <StepLabel style={{ fontSize: 13 }}>Grūdų tikrinimas</StepLabel>
           </Step>
           <Step>
-            <StepLabel>Pinigų išmokėjimas</StepLabel>
+            <StepLabel style={{ fontSize: 13 }}>Pinigų išmokėjimas</StepLabel>
           </Step>
         </Stepper>
         <div style={contentStyle}>

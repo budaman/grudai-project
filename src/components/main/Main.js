@@ -142,6 +142,19 @@ class Main extends Component {
                   leftIcon={<ActionEuroSymbol />}
                 />
                 <ListItem
+                  primaryText="Paslaugų užsakymas"
+                  onClick={() => {
+                    // this.handlePage("userPanel");
+                    this.setState({
+                      loading: true
+                    });
+                    setTimeout(() => {
+                      this.handlePage("userPanel");
+                    }, 1000);
+                  }}
+                  leftIcon={<ActionEuroSymbol />}
+                />
+                <ListItem
                   primaryText="Grafikai"
                   onClick={() => {
                     this.setState({
