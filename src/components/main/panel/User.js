@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Steper from "./Steper";
 import MoneyBar from "./MoneyBar";
+import { List, ListItem } from "material-ui/List";
 
 class User extends Component {
   state = {
@@ -21,7 +22,9 @@ class User extends Component {
             <img src="assets/grudai.png" alt="grudai" />
           </div>
           <div className="status-bar">
-            <Steper />
+            <List className="money-cont">
+              <Steper />
+            </List>
           </div>
           <div className="money-section">
             <MoneyBar />

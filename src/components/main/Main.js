@@ -78,8 +78,9 @@ class Main extends Component {
         fontSize: 9,
         backgroundColor: "#EF476F"
       },
-      bell: { top: -35 },
-      addMoney: { backgroundColor: "#bda26d" }
+      bell: { top: -35, color: "white" },
+      addMoney: { backgroundColor: "#bda26d" },
+      appBar: { color: "white", backgroundColor: "#223843" }
     };
     return (
       <div>
@@ -89,8 +90,10 @@ class Main extends Component {
               className={classnames("app-bar", { expanded: this.state.open })}
               onLeftIconButtonClick={this.handleToggle}
               title={this.state.thisPage}
+              style={styles.appBar}
               iconElementRight={
                 <ListItem
+                  style={styles.appBar}
                   className="profile"
                   leftAvatar={<Avatar size={40} src="assets/mantvydas.jpg" />}
                   primaryText="Mantvydas B."
@@ -101,7 +104,7 @@ class Main extends Component {
                       badgeStyle={styles.alert}
                     >
                       <IconButton style={styles.bell} tooltip="Notifications">
-                        <NotificationsIcon />
+                        <NotificationsIcon color={"white"} />
                       </IconButton>
                     </Badge>
                   }
