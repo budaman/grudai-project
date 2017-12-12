@@ -27,7 +27,7 @@ class Steper extends Component {
       case 0:
         return "Šiuo metu laukiama kada bus priduoti grūdai";
       case 1:
-        return "Vyksta grūdų tikrinimas";
+        return "VYKSTA GRŪDŲ TIKRINIMAS";
       case 2:
         return "Vyksta kainos nustatymas ir pinigų išmokėjimas";
       default:

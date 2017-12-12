@@ -29,14 +29,16 @@ class User extends Component {
         </div>
         <div className="statistic-container">
           <div className="stats-window-big">
-            <h5>Grūdų kokybė</h5>
+            <h5>Augalų rūšys</h5>
             <div className="stats-cont">
-              <img
-                className="statistic-img"
-                src="assets/static/1.png"
-                alt="static pic"
-              />
-              <div>
+              <div className="diagram-cont">
+                <img
+                  className="statistic-img"
+                  src="assets/static/1.png"
+                  alt="static pic"
+                />
+              </div>
+              <div className="list-container">
                 <ol>
                   <li>Lorem</li>
                   <li>ipsum</li>
@@ -48,12 +50,59 @@ class User extends Component {
             </div>
           </div>
           <div className="stats-window-big">
-            <h5>Lorem ipsum</h5>
-
-            <div className="stats-cont" />
+            <h5>Grūdų kokybė</h5>
+            <div className="stats-cont">
+              <div className="diagram-cont">
+                <img
+                  className="statistic-img"
+                  src="assets/static/2.png"
+                  alt="static pic"
+                />
+              </div>
+              <div className="list-container">
+                <ol>
+                  <li>Lorem</li>
+                  <li>ipsum</li>
+                </ol>
+              </div>
+            </div>
           </div>
-          <div className="stats-window" />
-          <div className="stats-window" />
+          <div className="stats-window-big">
+            <h5>Grūdų kokybė</h5>
+            <div className="stats-cont">
+              <div className="diagram-cont">
+                <img
+                  className="statistic-img"
+                  src="assets/static/2.png"
+                  alt="static pic"
+                />
+              </div>
+              <div className="list-container">
+                <ol>
+                  <li>Lorem</li>
+                  <li>ipsum</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div className="stats-window-big">
+            <h5>Grūdų kokybė</h5>
+            <div className="stats-cont">
+              <div className="diagram-cont">
+                <img
+                  className="statistic-img"
+                  src="assets/static/2.png"
+                  alt="static pic"
+                />
+              </div>
+              <div className="list-container">
+                <ol>
+                  <li>Lorem</li>
+                  <li>ipsum</li>
+                </ol>
+              </div>
+            </div>
+          </div>
           <div className="stats-window" />
           <div className="stats-window" />
           <div className="stats-window" />
