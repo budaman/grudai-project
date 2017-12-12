@@ -25,7 +25,25 @@ class User extends Component {
           </div>
         </div>
         <div className="statistic-container">
-          <div className="stats-window" />
+          <div className="stats-window-big">
+            <h5>Grūdų kokybė</h5>
+            <div className="stats-cont">
+              <img
+                className="statistic-img"
+                src="assets/static/1.png"
+                alt="static pic"
+              />
+              <div>
+                <ol>
+                  <li>Lorem</li>
+                  <li>ipsum</li>
+                  <li>dolor</li>
+                  <li>sit</li>
+                  <li>amet</li>
+                </ol>
+              </div>
+            </div>
+          </div>
           <div className="stats-window" />
           <div className="stats-window" />
           <div className="stats-window" />

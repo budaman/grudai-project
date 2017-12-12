@@ -113,10 +113,50 @@
 }
 
 .stats-window {
-  width: 350px;
-  height: 200px;
+  width: 500px;
+  height: 300px;
   background-color: #92b9bd;
   margin: 20px;
+}
+
+.stats-window-big {
+  border-radius: 2px;
+  width: 500px;
+  height: 300px;
+  background-color: #bda26d;
+  color: white;
+  margin: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.stats-window-big h5 {
+  display: flex;
+  justify-content: center;
+  margin: 2;
+}
+
+.stats-cont {
+  display: flex;
+  height: 300px;
+}
+
+.stats-cont div {
+  width: 100%;
+  height: 241px;
+  background-color: white;
+}
+
+.stats-cont div ol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.stats-cont div ol li {
+  color: black;
+  margin-top: 20px;
 }
 
 .progress {
@@ -144,6 +184,15 @@
 .money-div {
   margin-top: 15px;
   font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+}
+
+.statistic-img {
+  height: 241px;
+}
+
+.stats-window {
   display: flex;
   justify-content: center;
 }
