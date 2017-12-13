@@ -107,7 +107,6 @@
 }
 
 .top-header {
-  margin-top: 20px;
   display: flex;
 }
 
@@ -173,7 +172,8 @@
   height: 300px;
   background-color: #bda26d;
   color: white;
-  margin: 40px;
+  margin: 30px;
+  margin-top: 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -269,3 +269,32 @@
   display: flex;
   justify-content: center;
 }
+/* Payments history */
+.payments-cont {
+  background-color: white;
+  color: black;
+  height: 240px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.payments-cont ul {
+  list-style: none;
+}
+
+.payments-cont ul li {
+  list-style: none;
+  margin: 20px;
+}
+
+.diagram-cont-payment {
+  background-color: white;
+  height: 240px;
+}
+
+.diagram-cont-payment img {
+  background-color: white;
+  height: 20%;
+}
+
+/* Payments history ends */

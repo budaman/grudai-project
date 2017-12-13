@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-import Steper from "./Steper";
-import MoneyBar from "./MoneyBar";
-import { List, ListItem } from "material-ui/List";
-import Divider from "material-ui/Divider";
 
 class User extends Component {
   state = {
@@ -18,20 +14,6 @@ class User extends Component {
   render() {
     return (
       <div className="user-panel">
-        <div className="top-header">
-          <div className="logo-header">
-            <img src="assets/grudai.png" alt="grudai" />
-          </div>
-          <div className="status-bar">
-            <List className="money-cont">
-              <Steper />
-            </List>
-          </div>
-          <div className="money-section">
-            <MoneyBar />
-          </div>
-        </div>
-
         <div className="statistic-container">
           <div className="stats-window-big">
             <h5>Lorem ipsum</h5>

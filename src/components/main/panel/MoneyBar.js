@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import FlatButton from "material-ui/FlatButton";
 import ContentAddCircle from "material-ui/svg-icons/content/add-circle";
 import Divider from "material-ui/Divider";
-import Subheader from "material-ui/Subheader";
 import { List, ListItem } from "material-ui/List";
 
 const styles = {
@@ -25,6 +24,7 @@ class MoneyBar extends Component {
       <div>
         <List className="money-cont">
           <ListItem
+            style={{}}
             primaryText={
               <div className="money-div">
                 Sąskaita: <span className="money-span">500€</span>

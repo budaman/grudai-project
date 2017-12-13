@@ -4,6 +4,8 @@ import User from "./panel/User";
 import Schedule from "./panel/Schedule";
 import Loading from "./panel/Loading";
 import ChangeDate from "./panel/ChangeDate";
+import Payments from "./panel/Payments";
+import Header from "./panel/Header";
 
 import { List, ListItem } from "material-ui/List";
 import AppBar from "material-ui/AppBar";
@@ -27,6 +29,7 @@ import Badge from "material-ui/Badge";
 import IconButton from "material-ui/IconButton";
 import NotificationsIcon from "material-ui/svg-icons/social/notifications";
 import ActionEuroSymbol from "material-ui/svg-icons/action/euro-symbol";
+import ActionAddShoppingCart from "material-ui/svg-icons/action/add-shopping-cart";
 
 class Main extends Component {
   state = {
@@ -65,6 +68,13 @@ class Main extends Component {
         pageState: page,
         loading: false,
         thisPage: "Keisti kalendorių"
+      });
+    }
+    if (page === "payments") {
+      this.setState({
+        pageState: page,
+        loading: false,
+        thisPage: "Užsakymų istorija"
       });
     }
   };
@@ -132,15 +142,15 @@ class Main extends Component {
                   leftIcon={<ActionAccountCircle />}
                 />
                 <ListItem
-                  primaryText="Pinigų operacijos"
+                  primaryText="Užsakymų istorija"
                   onClick={() => {
                     // this.handlePage("userPanel");
                     this.setState({
                       loading: true
                     });
                     setTimeout(() => {
-                      this.handlePage("userPanel");
-                    }, 1000);
+                      this.handlePage("payments");
+                    }, 500);
                   }}
                   leftIcon={<ActionEuroSymbol />}
                 />
@@ -155,7 +165,7 @@ class Main extends Component {
                       this.handlePage("userPanel");
                     }, 1000);
                   }}
-                  leftIcon={<ActionEuroSymbol />}
+                  leftIcon={<ActionAddShoppingCart />}
                 />
                 <ListItem
                   primaryText="Grafikai"
@@ -239,6 +249,7 @@ class Main extends Component {
                 expanded: this.state.open
               })}
             >
+              <Header />
               {this.state.pageState === "userPanel" && !this.state.loading ? (
                 <User />
               ) : null}
@@ -247,6 +258,9 @@ class Main extends Component {
               ) : null}
               {this.state.pageState === "changeDate" && !this.state.loading ? (
                 <ChangeDate />
+              ) : null}
+              {this.state.pageState === "payments" && !this.state.loading ? (
+                <Payments />
               ) : null}
               {this.state.loading ? <Loading /> : null}
             </div>
