@@ -80,7 +80,7 @@ class Main extends Component {
       },
       bell: { top: -35, color: "white" },
       addMoney: { backgroundColor: "#bda26d" },
-      appBar: { color: "white", backgroundColor: "#223843" }
+      appBar: { color: "white", backgroundColor: "#3c4759" }
     };
     return (
       <div>
