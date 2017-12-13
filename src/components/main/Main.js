@@ -127,7 +127,9 @@ class Main extends Component {
               onRequestChange={open => this.setState({ open })}
             >
               <List>
-                <Subheader>Menu</Subheader>
+                <Subheader>
+                  <div> aaaa</div>
+                </Subheader>
                 <ListItem
                   primaryText="Kliento skydelis"
                   onClick={() => {
