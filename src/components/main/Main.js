@@ -128,7 +128,10 @@ class Main extends Component {
             >
               <List>
                 <Subheader>
-                  <div> aaaa</div>
+                  <div className="logo-container ">
+                    <img src="assets/grudai.png" alt="grudai" />
+                    <span>Klientų Sistema</span>
+                  </div>
                 </Subheader>
                 <ListItem
                   primaryText="Kliento skydelis"
@@ -251,20 +254,23 @@ class Main extends Component {
                 expanded: this.state.open
               })}
             >
-              <Header />
-              {this.state.pageState === "userPanel" && !this.state.loading ? (
-                <User />
-              ) : null}
-              {this.state.pageState === "schedule" && !this.state.loading ? (
-                <Schedule />
-              ) : null}
-              {this.state.pageState === "changeDate" && !this.state.loading ? (
-                <ChangeDate />
-              ) : null}
-              {this.state.pageState === "payments" && !this.state.loading ? (
-                <Payments />
-              ) : null}
-              {this.state.loading ? <Loading /> : null}
+              <div className="content-box">
+                <Header />
+                {this.state.pageState === "userPanel" && !this.state.loading ? (
+                  <User />
+                ) : null}
+                {this.state.pageState === "schedule" && !this.state.loading ? (
+                  <Schedule />
+                ) : null}
+                {this.state.pageState === "changeDate" &&
+                !this.state.loading ? (
+                  <ChangeDate />
+                ) : null}
+                {this.state.pageState === "payments" && !this.state.loading ? (
+                  <Payments />
+                ) : null}
+                {this.state.loading ? <Loading /> : null}
+              </div>
             </div>
           </div>
         </MuiThemeProvider>
