@@ -17,14 +17,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* {this.state.connected ? null : (
+        {this.state.connected ? null : (
           <Login
             isUserConnected={this.isUserConnected}
             connected={this.state.connected}
           />
         )}
-        {this.state.connected ? <Main /> : null} */}
-        <Main />
+        {this.state.connected ? <Main /> : null}
       </div>
     );
   }
