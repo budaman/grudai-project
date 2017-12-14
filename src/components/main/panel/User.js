@@ -32,7 +32,7 @@ class User extends Component {
                 />
               </div>
             </div>
-            <div className="statistic-label">Kredito ir Debito istorija</div>
+            <div className="statistic-label">Kredito ir Debeto istorija</div>
           </div>
           <div className="main-settings schedule-bar static-bar-header">
             <div className="statistic-icon">
@@ -121,6 +121,55 @@ class User extends Component {
           </div>
           <div className="diagram-container main-settings">
             <img src="assets/static/2.png" />{" "}
+          </div>
+        </div>
+        <div className="container-margin boxes-display">
+          <div className="container-big-box">
+            <div className="main-settings box-header">
+              <div className="box-header-icon">
+                <div className="statistic-icon-round">
+                  <ActionChromeReaderMode
+                    style={{
+                      width: 22,
+                      height: 19
+                    }}
+                    color="white"
+                  />
+                </div>
+              </div>
+              <div className="statistic-label">Kredito ir Debeto istorija</div>
+            </div>
+            <div className="main-settings box-content-big">
+              {" "}
+              <img
+                className="main-statistic-img"
+                src="assets/static/statistic.png"
+                alt="statistic"
+              />
+            </div>
+          </div>
+          <div className="container-small-box">
+            <div className="main-settings box-header">
+              <div className="box-header-icon">
+                <div className="statistic-icon-round">
+                  <ActionChromeReaderMode
+                    style={{
+                      width: 22,
+                      height: 19
+                    }}
+                    color="white"
+                  />
+                </div>
+              </div>
+              <div>Peržiūrėti operacijų istoriją</div>
+            </div>
+            <div className="main-settings box-content-big">
+              <img
+                className="document-img"
+                src="assets/static/documents.png"
+                alt="statistic"
+              />
+            </div>
           </div>
         </div>
       </div>
