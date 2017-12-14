@@ -6,6 +6,8 @@ import DeviceGraphicEq from "material-ui/svg-icons/device/graphic-eq";
 import DeviceStorage from "material-ui/svg-icons/device/storage";
 import ActionEuroSymbol from "material-ui/svg-icons/action/euro-symbol";
 import AlertWarning from "material-ui/svg-icons/alert/warning";
+import ActionDone from "material-ui/svg-icons/action/done";
+import ActionUpdate from "material-ui/svg-icons/action/update";
 
 class User extends Component {
   state = {
@@ -201,18 +203,47 @@ class User extends Component {
                   />
                 </div>
               </div>
-              <div>Peržiūrėti Operacijų Istoriją</div>
+              <div>Paskutiniai 5 pirkimai</div>
             </div>
-            <div className="main-settings box-content-big">
-              <img
-                className="document-img"
-                src="assets/static/documents.png"
-                alt="statistic"
-              />
+            <div className="main-settings last-operations">
+              <div className="last-operations-content darker">
+                <div className="status-date">2017-12-11</div>
+                <div className="status-type">Rugiai</div>
+                <div className="status-icon">
+                  <ActionUpdate color="#698eab" />
+                </div>
+              </div>
+              <div className="last-operations-content ">
+                <div className="status-date">2017-10-09</div>
+                <div className="status-type">Rugiai</div>
+                <div className="status-icon">
+                  <ActionUpdate color="#698eab" />
+                </div>
+              </div>
+              <div className="last-operations-content darker">
+                <div className="status-date">2017-08-20</div>
+                <div className="status-type">Kviečiai</div>
+                <div className="status-icon">
+                  <ActionDone color="#66c188" />
+                </div>
+              </div>
+              <div className="last-operations-content">
+                <div className="status-date">2017-07-16</div>
+                <div className="status-type">Kviečiai</div>
+                <div className="status-icon">
+                  <ActionDone color="#66c188" />
+                </div>
+              </div>
+              <div className="last-operations-content darker">
+                <div className="status-date">2017-05-04</div>
+                <div className="status-type">Rugiai</div>
+                <div className="status-icon">
+                  <ActionDone color="#66c188" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
         <div className="margin-top">
           <hr />
         </div>
