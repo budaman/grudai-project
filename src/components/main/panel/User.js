@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import ActionCreditCard from "material-ui/svg-icons/action/credit-card";
 import ActionChromeReaderMode from "material-ui/svg-icons/action/chrome-reader-mode";
+import DeviceDataUsage from "material-ui/svg-icons/device/data-usage";
+import DeviceGraphicEq from "material-ui/svg-icons/device/graphic-eq";
+import DeviceStorage from "material-ui/svg-icons/device/storage";
 
 class User extends Component {
   state = {
@@ -67,7 +70,7 @@ class User extends Component {
             {" "}
             <div className="statistic-icon">
               <div className="statistic-icon-round">
-                <ActionChromeReaderMode
+                <DeviceDataUsage
                   style={{
                     width: 22,
                     height: 19
@@ -76,13 +79,13 @@ class User extends Component {
                 />
               </div>
             </div>
-            <div className="statistic-label">Peržiūrėti operacijų istoriją</div>
+            <div className="statistic-label">Sugalvoti pavadinima</div>
           </div>
           <div className="diagram-bar main-settings">
             {" "}
             <div className="statistic-icon">
               <div className="statistic-icon-round">
-                <ActionChromeReaderMode
+                <DeviceGraphicEq
                   style={{
                     width: 22,
                     height: 19
@@ -91,13 +94,13 @@ class User extends Component {
                 />
               </div>
             </div>
-            <div className="statistic-label">Peržiūrėti operacijų istoriją</div>
+            <div className="statistic-label">Sugalvoti pavadinima</div>
           </div>
           <div className="diagram-bar main-settings">
             {" "}
             <div className="statistic-icon">
               <div className="statistic-icon-round">
-                <ActionChromeReaderMode
+                <DeviceStorage
                   style={{
                     width: 22,
                     height: 19
@@ -106,7 +109,18 @@ class User extends Component {
                 />
               </div>
             </div>
-            <div className="statistic-label">Peržiūrėti operacijų istoriją</div>
+            <div className="statistic-label">Sugalvoti pavadinima</div>
+          </div>
+        </div>
+        <div className="diagram-header static-cont">
+          <div className="diagram-container main-settings">
+            <img src="assets/static/5.png" />
+          </div>
+          <div className="diagram-container main-settings">
+            <img src="assets/static/3.png" />{" "}
+          </div>
+          <div className="diagram-container main-settings">
+            <img src="assets/static/2.png" />{" "}
           </div>
         </div>
       </div>

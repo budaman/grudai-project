@@ -142,6 +142,18 @@
   height: 55px;
 }
 
+.diagram-container {
+  width: 32%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 225px;
+}
+
+.diagram-container img {
+  height: 180px;
+}
+
 .static-bar-header {
   height: 55px;
 }
@@ -195,7 +207,7 @@
 .top-header {
   display: flex;
   justify-content: space-around;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 .header-content {
