@@ -89,9 +89,10 @@ class User extends Component {
                 />
               </div>
               <div className="alert-document-box">
-                <AlertWarning />{" "}
+                <AlertWarning style={{ color: "#fdd87b" }} />{" "}
                 <span style={{ marginLeft: 5 }}>
-                  yra nebaigtos 3 operacijos{" "}
+                  yra nebaigtos{" "}
+                  <span style={{ color: "#698eab" }}>3 operacijos</span>{" "}
                 </span>
               </div>
             </div>
