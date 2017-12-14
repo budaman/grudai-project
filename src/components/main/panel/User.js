@@ -16,7 +16,7 @@ class User extends Component {
   render() {
     return (
       <div className="user-panel">
-        <div className="static-cont">
+        <div className="static-cont container-margin">
           <div className="main-settings static-bar">
             <div className="statistic-icon">
               <div className="statistic-icon-round">
@@ -48,9 +48,66 @@ class User extends Component {
         </div>
         <div className="static-cont main-statistic">
           <div className="main-settings static-bar statistic-main-icon ">
-            <img src="assets/static/statistic.png" alt="statistic" />
+            <img
+              className="main-statistic-img"
+              src="assets/static/statistic.png"
+              alt="statistic"
+            />
           </div>
-          <div className="main-settings schedule-bar">1</div>
+          <div className="main-settings schedule-bar statistic-main-icon">
+            <img
+              className="document-img"
+              src="assets/static/documents.png"
+              alt="statistic"
+            />
+          </div>
+        </div>
+        <div className="diagram-header container-margin static-cont">
+          <div className="diagram-bar main-settings">
+            {" "}
+            <div className="statistic-icon">
+              <div className="statistic-icon-round">
+                <ActionChromeReaderMode
+                  style={{
+                    width: 22,
+                    height: 19
+                  }}
+                  color="white"
+                />
+              </div>
+            </div>
+            <div className="statistic-label">Peržiūrėti operacijų istoriją</div>
+          </div>
+          <div className="diagram-bar main-settings">
+            {" "}
+            <div className="statistic-icon">
+              <div className="statistic-icon-round">
+                <ActionChromeReaderMode
+                  style={{
+                    width: 22,
+                    height: 19
+                  }}
+                  color="white"
+                />
+              </div>
+            </div>
+            <div className="statistic-label">Peržiūrėti operacijų istoriją</div>
+          </div>
+          <div className="diagram-bar main-settings">
+            {" "}
+            <div className="statistic-icon">
+              <div className="statistic-icon-round">
+                <ActionChromeReaderMode
+                  style={{
+                    width: 22,
+                    height: 19
+                  }}
+                  color="white"
+                />
+              </div>
+            </div>
+            <div className="statistic-label">Peržiūrėti operacijų istoriją</div>
+          </div>
         </div>
       </div>
     );

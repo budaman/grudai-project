@@ -7,6 +7,12 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-settings:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
@@ -111,13 +117,14 @@
 
 /* user-panel-stats */
 
-.user-panel {
-}
-
 .static-cont {
   margin-top: 5px;
   display: flex;
   justify-content: space-around;
+}
+
+.container-margin {
+  margin-top: 30px;
 }
 
 .static-bar {
@@ -125,6 +132,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.diagram-bar {
+  width: 32%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
 }
 
 .static-bar-header {
@@ -157,15 +172,20 @@
 .schedule-bar {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .statistic-main-icon {
   height: 225px;
 }
 
-.statistic-main-icon img {
-  height: 200px;
-  width: 325px;
+.main-statistic-img {
+  height: 180px;
+  width: 320px;
+}
+
+.document-img {
+  height: 140px;
 }
 
 /* user-panel-ends */
@@ -176,7 +196,6 @@
   display: flex;
   justify-content: space-around;
   margin-top: 15px;
-  margin-bottom: 30px;
 }
 
 .header-content {
