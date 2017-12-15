@@ -86,7 +86,7 @@ class Main extends Component {
         height: 16,
         top: -12,
         fontSize: 9,
-        backgroundColor: "#EF476F"
+        backgroundColor: "#dc5f4b"
       },
       bell: { top: -35, color: "white" },
       addMoney: { backgroundColor: "#bda26d" },

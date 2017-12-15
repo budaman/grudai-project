@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ActionCreditCard from "material-ui/svg-icons/action/credit-card";
 import ActionChromeReaderMode from "material-ui/svg-icons/action/chrome-reader-mode";
 import DeviceDataUsage from "material-ui/svg-icons/device/data-usage";
 import DeviceGraphicEq from "material-ui/svg-icons/device/graphic-eq";
@@ -58,7 +57,7 @@ class User extends Component {
                   </div>
                 </div>
               </div>
-              <div class="statistic-img-cont">
+              <div className="statistic-img-cont">
                 <img
                   className="main-statistic-img"
                   src="assets/static/statistic.png"
@@ -80,26 +79,53 @@ class User extends Component {
                   />
                 </div>
               </div>
-              <div>Peržiūrėti Operacijų Istoriją</div>
+              <div>Paskutiniai pristatymai</div>
             </div>
-            <div className="main-settings documents-content-box">
-              <div className="documents-img-container">
-                <img
-                  className="document-img"
-                  src="assets/static/documents.png"
-                  alt="statistic"
-                />
+            <div className="main-settings last-operations">
+              <div className="last-operations-content darker">
+                <div className="status-date">2017-12-11</div>
+                <div className="status-type">Rugiai</div>
+                <div className="status-icon">
+                  <ActionUpdate color="#698eab" />
+                  <span className="status-bar-label">grudų svėrimas</span>
+                </div>
               </div>
-              <div className="alert-document-box">
-                <AlertWarning style={{ color: "#fdd87b" }} />{" "}
-                <span style={{ marginLeft: 5 }}>
-                  yra nebaigtos{" "}
-                  <span style={{ color: "#698eab" }}>3 operacijos</span>{" "}
-                </span>
+              <div className="last-operations-content ">
+                <div className="status-date">2017-12-05</div>
+                <div className="status-type">Rugiai</div>
+                <div className="status-icon">
+                  <ActionUpdate color="#698eab" />
+                  <span className="status-bar-label">grūdų tikrinimas</span>
+                </div>
+              </div>
+              <div className="last-operations-content darker">
+                <div className="status-date">2017-08-20</div>
+                <div className="status-type">Kviečiai</div>
+                <div className="status-icon">
+                  <ActionDone color="#66c188" />
+                  <span className="status-bar-finished">baigta</span>
+                </div>
+              </div>
+              <div className="last-operations-content">
+                <div className="status-date">2017-07-16</div>
+                <div className="status-type">Kviečiai</div>
+                <div className="status-icon">
+                  <ActionDone color="#66c188" />
+                  <span className="status-bar-finished">baigta</span>
+                </div>
+              </div>
+              <div className="last-operations-content darker">
+                <div className="status-date">2017-05-04</div>
+                <div className="status-type">Rugiai</div>
+                <div className="status-icon">
+                  <ActionDone color="#66c188" />
+                  <span className="status-bar-finished">baigta</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
         <div className="boxes-display container-margin">
           <div className="container-small-box">
             <div className="main-settings box-header">
@@ -118,7 +144,7 @@ class User extends Component {
             </div>
             <div className="main-settings box-content-middle">
               <div className="diagram-container">
-                <img src="assets/static/5.png" />
+                <img alt="diagram" src="assets/static/5.png" />
               </div>
             </div>
           </div>
@@ -139,7 +165,7 @@ class User extends Component {
             </div>
             <div className="main-settings box-content-middle">
               <div className="diagram-container">
-                <img src="assets/static/3.png" />
+                <img alt="diagram-3" src="assets/static/3.png" />
               </div>
             </div>
           </div>
@@ -160,7 +186,7 @@ class User extends Component {
             </div>
             <div className="main-settings box-content-middle">
               <div className="diagram-container">
-                <img src="assets/static/2.png" />
+                <img alt="diagram-2" src="assets/static/2.png" />
               </div>
             </div>
           </div>
@@ -203,47 +229,27 @@ class User extends Component {
                   />
                 </div>
               </div>
-              <div>Paskutiniai 5 pirkimai</div>
+              <div>Peržiūrėti Operacijų Istoriją</div>
             </div>
-            <div className="main-settings last-operations">
-              <div className="last-operations-content darker">
-                <div className="status-date">2017-12-11</div>
-                <div className="status-type">Rugiai</div>
-                <div className="status-icon">
-                  <ActionUpdate color="#698eab" />
-                </div>
+            <div className="main-settings documents-content-box">
+              <div className="documents-img-container">
+                <img
+                  className="document-img"
+                  src="assets/static/documents.png"
+                  alt="statistic"
+                />
               </div>
-              <div className="last-operations-content ">
-                <div className="status-date">2017-10-09</div>
-                <div className="status-type">Rugiai</div>
-                <div className="status-icon">
-                  <ActionUpdate color="#698eab" />
-                </div>
-              </div>
-              <div className="last-operations-content darker">
-                <div className="status-date">2017-08-20</div>
-                <div className="status-type">Kviečiai</div>
-                <div className="status-icon">
-                  <ActionDone color="#66c188" />
-                </div>
-              </div>
-              <div className="last-operations-content">
-                <div className="status-date">2017-07-16</div>
-                <div className="status-type">Kviečiai</div>
-                <div className="status-icon">
-                  <ActionDone color="#66c188" />
-                </div>
-              </div>
-              <div className="last-operations-content darker">
-                <div className="status-date">2017-05-04</div>
-                <div className="status-type">Rugiai</div>
-                <div className="status-icon">
-                  <ActionDone color="#66c188" />
-                </div>
+              <div className="alert-document-box">
+                <AlertWarning style={{ color: "#fdd87b" }} />{" "}
+                <span style={{ marginLeft: 5 }}>
+                  yra nebaigtos{" "}
+                  <span style={{ color: "#698eab" }}>3 operacijos</span>{" "}
+                </span>
               </div>
             </div>
           </div>
         </div>
+
         <div className="margin-top">
           <hr />
         </div>

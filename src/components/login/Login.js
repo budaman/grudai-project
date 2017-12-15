@@ -12,8 +12,7 @@ injectTapEventPlugin();
 
 const styles = {
   container: {
-    textAlign: "center",
-    paddingTop: 200
+    textAlign: "center"
   }
 };
 
@@ -70,7 +69,7 @@ class Login extends Component {
     );
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
-        <div style={styles.container}>
+        <div className="loginContainer" style={styles.container}>
           <Dialog
             open={this.state.open}
             title="Pasirinkite norimą banką"

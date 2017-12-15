@@ -1,16 +1,10 @@
 import React, { Component } from "react";
-import Steper from "./Steper";
-import MoneyBar from "./MoneyBar";
-import { List } from "material-ui/List";
 import ActionCreditCard from "material-ui/svg-icons/action/credit-card";
 import ActionAccountBalanceWallet from "material-ui/svg-icons/action/account-balance-wallet";
 import ActionAssignmentLate from "material-ui/svg-icons/action/assignment-late";
 
 class Header extends Component {
   render() {
-    const styles = {
-      largeIcon: {}
-    };
     return (
       <div className="top-header ">
         <div className="header-content main-settings">
