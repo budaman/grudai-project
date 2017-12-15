@@ -7,6 +7,7 @@ import ActionEuroSymbol from "material-ui/svg-icons/action/euro-symbol";
 import AlertWarning from "material-ui/svg-icons/alert/warning";
 import ActionDone from "material-ui/svg-icons/action/done";
 import ActionUpdate from "material-ui/svg-icons/action/update";
+import MyFirstChart from "./MyFirstChart";
 
 class User extends Component {
   state = {
@@ -100,7 +101,7 @@ class User extends Component {
               </div>
               <div className="last-operations-content darker">
                 <div className="status-date">2017-08-20</div>
-                <div className="status-type">Kviečiai</div>
+                <div className="status-type">Mišrus</div>
                 <div className="status-icon">
                   <ActionDone color="#66c188" />
                   <span className="status-bar-finished">baigta</span>
@@ -209,11 +210,7 @@ class User extends Component {
             </div>
             <div className="main-settings box-content-big">
               {" "}
-              <img
-                className="main-statistic-img"
-                src="assets/static/graph.png"
-                alt="statistic"
-              />
+              <MyFirstChart data={[4, 8, 15, 16, 23, 42]} />
             </div>
           </div>
           <div className="container-small-box">
