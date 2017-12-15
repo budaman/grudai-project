@@ -540,3 +540,21 @@
 }
 
 /* New Status bar ends */
+
+.page-title-cont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 17px;
+}
+
+.profile-cont {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}

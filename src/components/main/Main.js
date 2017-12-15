@@ -90,7 +90,7 @@ class Main extends Component {
       },
       bell: { top: -35, color: "white" },
       addMoney: { backgroundColor: "#bda26d" },
-      appBar: { color: "white", backgroundColor: "#3c4759" }
+      appBar: { color: "white", backgroundColor: "#6c8fae" }
     };
     return (
       <div>
@@ -99,28 +99,35 @@ class Main extends Component {
             <AppBar
               className={classnames("app-bar", { expanded: this.state.open })}
               onLeftIconButtonClick={this.handleToggle}
-              title={this.state.thisPage}
+              title={
+                <div className="page-title-cont">
+                  <span className="page-title">{this.state.thisPage}</span>
+                </div>
+              }
               style={styles.appBar}
               iconElementRight={
-                <ListItem
-                  style={styles.appBar}
-                  className="profile"
-                  leftAvatar={<Avatar size={40} src="assets/mantvydas.jpg" />}
-                  primaryText="Mantvydas B."
-                  rightIcon={
-                    <Badge
-                      badgeContent={1}
-                      secondary={true}
-                      badgeStyle={styles.alert}
-                    >
-                      <IconButton style={styles.bell} tooltip="Notifications">
-                        <NotificationsIcon color={"white"} />
-                      </IconButton>
-                    </Badge>
-                  }
-                />
+                <div className="profile-cont">
+                  <ListItem
+                    style={styles.appBar}
+                    className="profile"
+                    leftAvatar={<Avatar size={35} src="assets/mantvydas.jpg" />}
+                    primaryText="Mantvydas B."
+                    rightIcon={
+                      <Badge
+                        badgeContent={1}
+                        secondary={true}
+                        badgeStyle={styles.alert}
+                      >
+                        <IconButton style={styles.bell} tooltip="Notifications">
+                          <NotificationsIcon color={"white"} />
+                        </IconButton>
+                      </Badge>
+                    }
+                  />
+                </div>
               }
             />
+
             <Drawer
               docked={true}
               open={this.state.open}
