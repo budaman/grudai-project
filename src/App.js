@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import "materialize-css/dist/css/materialize.min.css";
 import Login from "./components/login/Login";
 import Main from "./components/main/Main";
 
@@ -18,14 +17,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* {this.state.connected ? null : (
+        {this.state.connected ? null : (
           <Login
             isUserConnected={this.isUserConnected}
             connected={this.state.connected}
           />
         )}
-        {this.state.connected ? <Main /> : null} */}
-        <Main />
+        {this.state.connected ? <Main /> : null}
       </div>
     );
   }

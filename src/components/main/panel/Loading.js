@@ -14,20 +14,8 @@ class Loading extends Component {
 
   render() {
     return (
-      <div className="loader-cont">
-        <div class="preloader-wrapper big active">
-          <div class="spinner-layer spinner-teal lighten-2-only">
-            <div class="circle-clipper left">
-              <div class="circle" />
-            </div>
-            <div class="gap-patch">
-              <div class="circle" />
-            </div>
-            <div class="circle-clipper right">
-              <div class="circle" />
-            </div>
-          </div>
-        </div>
+      <div className="progress">
+        <CircularProgress size={100} thickness={10} color="#57b7ae" />
       </div>
     );
   }
