@@ -13,6 +13,10 @@ class Payments extends Component {
     return (
       <div className="statistic-container">
         <div className="stats-window-big">
+          <div class="card-panel teal lighten-2 margin-top">
+            Visi užsakymai apmokėti.
+          </div>
+
           <h5>Užsakymų istorija</h5>
           <div className="stats-cont">
             <Table>
@@ -78,7 +82,6 @@ class Payments extends Component {
               </TableBody>
             </Table>
           </div>
-          <div class="card-panel teal lighten-2">Visi užsakymai apmokėti.</div>
         </div>
       </div>
     );
