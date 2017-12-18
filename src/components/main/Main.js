@@ -6,6 +6,7 @@ import Loading from "./panel/Loading";
 import ChangeDate from "./panel/ChangeDate";
 import Payments from "./panel/Payments";
 import Header from "./panel/Header";
+import Comment from "./panel/Comment";
 
 import { List, ListItem } from "material-ui/List";
 import AppBar from "material-ui/AppBar";
@@ -84,11 +85,12 @@ class Main extends Component {
       alert: {
         width: 16,
         height: 16,
-        top: -12,
+        top: -16,
+        right: 4,
         fontSize: 9,
         backgroundColor: "#dc5f4b"
       },
-      bell: { top: -35, color: "white" },
+      bell: { top: -40, color: "white" },
       addMoney: { backgroundColor: "#bda26d" },
       appBar: { color: "white", backgroundColor: "#6c8fae" }
     };
@@ -110,8 +112,10 @@ class Main extends Component {
                   <ListItem
                     style={styles.appBar}
                     className="profile"
-                    leftAvatar={<Avatar size={35} src="assets/mantvydas.jpg" />}
-                    primaryText="Mantvydas B."
+                    leftAvatar={<Avatar size={40} src="assets/mantvydas.jpg" />}
+                    primaryText={
+                      <span className="profile-name">Mantvydas B.</span>
+                    }
                     rightIcon={
                       <Badge
                         badgeContent={1}
@@ -277,6 +281,7 @@ class Main extends Component {
                   <Payments />
                 ) : null}
                 {this.state.loading ? <Loading /> : null}
+                <Comment />
               </div>
             </div>
           </div>
