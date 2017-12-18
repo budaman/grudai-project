@@ -1,5 +1,4 @@
 import React from "react";
-import ActionAddShoppingCart from "material-ui/svg-icons/action/add-shopping-cart";
 import CommunicationEmail from "material-ui/svg-icons/communication/email";
 
 export default class Comment extends React.Component {

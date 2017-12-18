@@ -7,6 +7,7 @@ import ChangeDate from "./panel/ChangeDate";
 import Payments from "./panel/Payments";
 import Header from "./panel/Header";
 import Comment from "./panel/Comment";
+import Order from "./panel/Order";
 
 import { List, ListItem } from "material-ui/List";
 import AppBar from "material-ui/AppBar";
@@ -76,6 +77,13 @@ class Main extends Component {
         pageState: page,
         loading: false,
         thisPage: "Užsakymų istorija"
+      });
+    }
+    if (page === "order") {
+      this.setState({
+        pageState: page,
+        loading: false,
+        thisPage: "Paslaugų užsakymas"
       });
     }
   };
@@ -178,8 +186,8 @@ class Main extends Component {
                       loading: true
                     });
                     setTimeout(() => {
-                      this.handlePage("userPanel");
-                    }, 1000);
+                      this.handlePage("order");
+                    }, 500);
                   }}
                   leftIcon={<ActionAddShoppingCart />}
                 />
@@ -280,7 +288,11 @@ class Main extends Component {
                 {this.state.pageState === "payments" && !this.state.loading ? (
                   <Payments />
                 ) : null}
+                {this.state.pageState === "order" && !this.state.loading ? (
+                  <Order />
+                ) : null}
                 {this.state.loading ? <Loading /> : null}
+
                 <Comment />
               </div>
             </div>

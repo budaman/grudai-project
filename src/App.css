@@ -423,6 +423,11 @@
   justify-content: center;
 }
 
+.status-table-label {
+  animation: mymove 1.5s infinite;
+  color: #dc5f4b;
+}
+
 .status-bar-finished {
   margin: 0;
   margin-top: 2px;
