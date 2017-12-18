@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import "materialize-css/dist/css/materialize.min.css";
 import Login from "./components/login/Login";
 import Main from "./components/main/Main";
 

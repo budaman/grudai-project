@@ -78,6 +78,7 @@ class Payments extends Component {
               </TableBody>
             </Table>
           </div>
+          <div class="card-panel teal lighten-2">Visi užsakymai apmokėti.</div>
         </div>
       </div>
     );

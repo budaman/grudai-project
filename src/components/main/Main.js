@@ -292,7 +292,6 @@ class Main extends Component {
                   <Order />
                 ) : null}
                 {this.state.loading ? <Loading /> : null}
-
                 <Comment />
               </div>
             </div>

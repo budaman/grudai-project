@@ -146,7 +146,7 @@ const Content = props => {
       <RaisedButton
         label="prisijungti prie sistemos"
         secondary={true}
-        onTouchTap={props.handleTouchTap}
+        onClick={props.handleTouchTap}
       />
     </div>
   );
