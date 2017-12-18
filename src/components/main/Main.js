@@ -275,7 +275,7 @@ class Main extends Component {
             >
               <div className="content-box">
                 <Header />
-                {this.state.pageState === "userPanel" && !this.state.loading ? (
+                {/* {this.state.pageState === "userPanel" && !this.state.loading ? (
                   <User />
                 ) : null}
                 {this.state.pageState === "schedule" && !this.state.loading ? (
@@ -291,7 +291,8 @@ class Main extends Component {
                 {this.state.pageState === "order" && !this.state.loading ? (
                   <Order />
                 ) : null}
-                {this.state.loading ? <Loading /> : null}
+                {this.state.loading ? <Loading /> : null} */}
+                <Payments />
                 <Comment />
               </div>
             </div>
