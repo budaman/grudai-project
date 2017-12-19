@@ -13,7 +13,9 @@ class Payments extends Component {
     return (
       <div className="statistic-container">
         <div className="stats-window-big">
-          <div class="green-message margin-top">Visi užsakymai apmokėti.</div>
+          <div className="green-message margin-top">
+            Visi užsakymai apmokėti.
+          </div>
 
           <h5>Užsakymų istorija</h5>
           <div className="stats-cont">

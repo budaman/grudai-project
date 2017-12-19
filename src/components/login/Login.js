@@ -6,7 +6,6 @@ import FlatButton from "material-ui/FlatButton";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import injectTapEventPlugin from "react-tap-event-plugin";
-import CircularProgress from "material-ui/CircularProgress";
 import Loading from "../main/panel/Loading";
 
 injectTapEventPlugin();

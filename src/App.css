@@ -1,5 +1,7 @@
 /* Animation */
 
+/* D3 Styling Starts */
+
 .chart rect {
   fill: #698eab;
 }
@@ -9,6 +11,28 @@
   font: 10px sans-serif;
   text-anchor: end;
 }
+
+.verticalChart rect {
+  fill: #698eab;
+}
+
+.verticalChart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+.chart rect {
+  fill: #698eab;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+/* D3 Styling Ends */
 
 .main-settings {
   background-color: #FFFF;

@@ -7,7 +7,8 @@ import ActionEuroSymbol from "material-ui/svg-icons/action/euro-symbol";
 import AlertWarning from "material-ui/svg-icons/alert/warning";
 import ActionDone from "material-ui/svg-icons/action/done";
 import ActionUpdate from "material-ui/svg-icons/action/update";
-import MyFirstChart from "./MyFirstChart";
+import MyFirstChart from "../d3/MyFirstChart";
+import D3Chart from "../d3/D3Chart";
 
 class User extends Component {
   state = {
@@ -187,7 +188,7 @@ class User extends Component {
             </div>
             <div className="main-settings box-content-middle">
               <div className="diagram-container">
-                <img alt="diagram-2" src="assets/static/2.png" />
+                <D3Chart data={[50, 13, 25]} />
               </div>
             </div>
           </div>
@@ -210,7 +211,7 @@ class User extends Component {
             </div>
             <div className="main-settings box-content-big">
               {" "}
-              <MyFirstChart data={[4, 8, 15, 16, 23, 42]} />
+              <MyFirstChart data={[10, 20, 80]} />
             </div>
           </div>
           <div className="container-small-box">

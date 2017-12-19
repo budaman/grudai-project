@@ -3,10 +3,6 @@ import { scaleLinear } from "d3-scale";
 import { max } from "d3-array";
 import { select } from "d3-selection";
 class MyFirstChart extends Component {
-  constructor(props) {
-    super(props);
-    this.createBarChart = this.createBarChart.bind(this);
-  }
   componentDidMount() {
     this.createBarChart();
   }
@@ -30,7 +26,7 @@ class MyFirstChart extends Component {
       .enter()
       .append("g")
       .attr("transform", function(d, i) {
-        return "translate(0," + i * barHeight + ")";
+        return `translate(0, ${i * barHeight})`;
       });
 
     bar
@@ -42,7 +38,7 @@ class MyFirstChart extends Component {
       .append("text")
       .attr("x", d => xScale(d) - 3)
       .attr("y", barHeight / 2)
-      .attr("dy", ".35em")
+      .attr("dy", ".40em")
       .text(d => d);
   }
   render() {

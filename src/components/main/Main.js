@@ -8,6 +8,8 @@ import Payments from "./panel/Payments";
 import Header from "./panel/Header";
 import Comment from "./panel/Comment";
 import Order from "./panel/Order";
+import D3Chart from "./d3/D3Chart";
+import MyFirstChart from "./d3/MyFirstChart";
 
 import { List, ListItem } from "material-ui/List";
 import AppBar from "material-ui/AppBar";
@@ -275,7 +277,7 @@ class Main extends Component {
             >
               <div className="content-box">
                 <Header />
-                {/* {this.state.pageState === "userPanel" && !this.state.loading ? (
+                {this.state.pageState === "userPanel" && !this.state.loading ? (
                   <User />
                 ) : null}
                 {this.state.pageState === "schedule" && !this.state.loading ? (
@@ -291,8 +293,8 @@ class Main extends Component {
                 {this.state.pageState === "order" && !this.state.loading ? (
                   <Order />
                 ) : null}
-                {this.state.loading ? <Loading /> : null} */}
-                <Payments />
+                {this.state.loading ? <Loading /> : null}
+
                 <Comment />
               </div>
             </div>
