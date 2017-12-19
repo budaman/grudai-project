@@ -4,7 +4,7 @@ import { max } from "d3-array";
 import { select } from "d3-selection";
 import { arc, pie } from "d3-shape";
 
-export default class D3Chart extends Component {
+export default class PlantType extends Component {
   componentDidMount() {
     this.createBarChart();
   }
@@ -12,7 +12,6 @@ export default class D3Chart extends Component {
   createBarChart() {
     const node = this.node;
     const data = this.props.data;
-    const text = ["Kviečiai", "Rūgiai", "Aviža"];
     let r = 80;
 
     let color = scaleOrdinal().range(["#57b7ae", "#3ec8dd", "#5ac5fa"]);
@@ -41,7 +40,7 @@ export default class D3Chart extends Component {
     arcs
       .append("text")
       .attr("transform", d => `translate(${arcEl.centroid(d)})`)
-      .text((d, i) => text[i]);
+      .text(d => `${d.data}%`);
   }
 
   render() {

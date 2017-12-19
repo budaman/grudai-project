@@ -32,6 +32,23 @@
   text-anchor: end;
 }
 
+.agenda {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.agenda-elem {
+  display: flex;
+  align-items: center;
+}
+
+.agenda-elem span {
+  width: 10px;
+  height: 10px;
+}
+
 /* D3 Styling Ends */
 
 .main-settings {
@@ -259,6 +276,7 @@
 }
 
 .box-content-middle {
+  position: relative;
   height: 225px;
   margin-top: 5px;
   display: flex;

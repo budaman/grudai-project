@@ -8,7 +8,8 @@ import AlertWarning from "material-ui/svg-icons/alert/warning";
 import ActionDone from "material-ui/svg-icons/action/done";
 import ActionUpdate from "material-ui/svg-icons/action/update";
 import MyFirstChart from "../d3/MyFirstChart";
-import D3Chart from "../d3/D3Chart";
+import QualityChart from "../d3/QualityChart";
+import PlantType from "../d3/PlantType";
 
 class User extends Component {
   state = {
@@ -142,11 +143,25 @@ class User extends Component {
                   />
                 </div>
               </div>
-              <div className="statistic-label">Pelno Augimas</div>
+              <div className="statistic-label">Kokybės Rodikliai</div>
             </div>
             <div className="main-settings box-content-middle">
               <div className="diagram-container">
-                <img alt="diagram" src="assets/static/5.png" />
+                <QualityChart data={[25, 53, 22]} />
+                <div className="agenda">
+                  <div className="agenda-elem">
+                    <span style={{ backgroundColor: "#60b8b0" }} />
+                    <div>Gera</div>
+                  </div>
+                  <div className="agenda-elem">
+                    <span style={{ backgroundColor: "#4ecae0" }} />
+                    <div>Vidutinė</div>
+                  </div>
+                  <div className="agenda-elem">
+                    <span style={{ backgroundColor: "#f96d2a" }} />
+                    <div>Prasta</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -188,7 +203,21 @@ class User extends Component {
             </div>
             <div className="main-settings box-content-middle">
               <div className="diagram-container">
-                <D3Chart data={[50, 13, 25]} />
+                <PlantType data={[57, 25, 18]} />
+                <div className="agenda">
+                  <div className="agenda-elem">
+                    <span style={{ backgroundColor: "#57b7ae" }} />
+                    <div> Rūgiai</div>
+                  </div>
+                  <div className="agenda-elem">
+                    <span style={{ backgroundColor: "#3ec8dd" }} />
+                    <div> Kviečiai</div>
+                  </div>
+                  <div className="agenda-elem">
+                    <span style={{ backgroundColor: "#5ac5fa" }} />
+                    <div> Avižos</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -211,7 +240,7 @@ class User extends Component {
             </div>
             <div className="main-settings box-content-big">
               {" "}
-              <MyFirstChart data={[10, 20, 80]} />
+              <MyFirstChart data={[10, 20, 80, 30, 40]} />
             </div>
           </div>
           <div className="container-small-box">
