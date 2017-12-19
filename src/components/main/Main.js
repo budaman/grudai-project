@@ -8,7 +8,6 @@ import Payments from "./panel/Payments";
 import Header from "./panel/Header";
 import Comment from "./panel/Comment";
 import Order from "./panel/Order";
-import MyFirstChart from "./d3/MyFirstChart";
 
 import { List, ListItem } from "material-ui/List";
 import AppBar from "material-ui/AppBar";

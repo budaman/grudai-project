@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { scaleLinear, scaleOrdinal } from "d3-scale";
-import { max } from "d3-array";
+import { scaleOrdinal } from "d3-scale";
 import { select } from "d3-selection";
 import { arc, pie } from "d3-shape";
 
@@ -40,6 +39,7 @@ export default class QualityChart extends Component {
     arcs
       .append("text")
       .attr("transform", d => `translate(${arcEl.centroid(d)})`)
+
       .text(d => `${d.data}%`);
   }
 

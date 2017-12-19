@@ -148,6 +148,7 @@ class User extends Component {
             <div className="main-settings box-content-middle">
               <div className="diagram-container">
                 <QualityChart data={[25, 53, 22]} />
+
                 <div className="agenda">
                   <div className="agenda-elem">
                     <span style={{ backgroundColor: "#60b8b0" }} />
