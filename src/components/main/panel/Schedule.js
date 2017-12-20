@@ -15,7 +15,9 @@ class Schedule extends Component {
     return (
       <div className="user-panel">
         <div className="statistic-container">
-          <div className="stats-window">Schedule</div>
+          <div className="schedule-window">
+            <img alt="schedule" src="assets/static/schedule.png" />
+          </div>
         </div>
       </div>
     );
